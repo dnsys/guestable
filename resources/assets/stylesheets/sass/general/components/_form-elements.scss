@@ -1,0 +1,257 @@
+.formsection {
+  label {
+    color: $gray-1;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 0 8px 2px;
+  }
+  .inputfield {
+    margin-bottom: 20px;
+    input {
+      &[type="text"],
+      &[type="email"],
+      &[type="password"],
+      &[type="tel"],
+      &[type="url"],
+      &[type="number"] {
+        height: 50px;
+        // display: block;
+        // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.17);
+        padding: 12px 19px;
+        border: 1px solid $gray-9;
+        box-shadow: none;
+        border-radius: 0;
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        /* - Chrome ≤56,
+   - Safari 5-10.0
+   - iOS Safari 4.2-10.2
+   - Opera 15-43
+   - Opera Mobile >12
+   - Android Browser 2.1-4.4.4
+   - Samsung Internet
+   - UC Browser for Android
+   - QQ Browser */
+        &::-webkit-input-placeholder {
+          color: $gray-14;
+        }
+        /* Firefox 4-18 */
+        &:-moz-placeholder {
+          color: $gray-14;
+        }
+        /* Firefox 19-50 */
+        &::-moz-placeholder {
+          color: $gray-14;
+        }
+        /* - Internet Explorer 10–11
+   - Internet Explorer Mobile 10-11 */
+        &:-ms-input-placeholder {
+          color: $gray-14 !important;
+        }
+        /* Edge (also supports ::-webkit-input-placeholder) */
+        &::-ms-input-placeholder {
+          color: $gray-14;
+        }
+      }
+    }
+    textarea {
+      resize: none;
+      padding: 12px 19px;
+      border: 1px solid $gray-9;
+      box-shadow: none;
+      border-radius: 0;
+      color: $black;
+      font-size: 16px;
+      font-weight: 400;
+      /* - Chrome ≤56,
+   - Safari 5-10.0
+   - iOS Safari 4.2-10.2
+   - Opera 15-43
+   - Opera Mobile >12
+   - Android Browser 2.1-4.4.4
+   - Samsung Internet
+   - UC Browser for Android
+   - QQ Browser */
+      &::-webkit-input-placeholder {
+        color: $gray-14;
+      }
+      /* Firefox 4-18 */
+      &:-moz-placeholder {
+        color: $gray-14;
+      }
+      /* Firefox 19-50 */
+      &::-moz-placeholder {
+        color: $gray-14;
+      }
+      /* - Internet Explorer 10–11
+   - Internet Explorer Mobile 10-11 */
+      &:-ms-input-placeholder {
+        color: $gray-14 !important;
+      }
+      /* Edge (also supports ::-webkit-input-placeholder) */
+      &::-ms-input-placeholder {
+        color: $gray-14;
+      }
+    }
+  }
+  .filefield {
+    margin: 20px 0;
+    white-space: nowrap;
+    // input[type="file"] {
+    // 	width: 200px;
+    // 	border: solid #777 1px;
+    // 	height: 30px;
+    // 	line-height: 30px;
+    // 	background: #fff;
+    // 	-webkit-box-shadow: inset 0px 2px 0px rgba(0,0,0,.05);
+    // 	-moz-box-shadow: inset 0px 2px 0px rgba(0,0,0,.05);
+    // 	box-shadow: inset 0px 2px 0px rgba(0,0,0,.05);
+    // 	color: #777;
+    // 	text-shadow: 0px 1px 0px #fff;
+    // 	-moz-border-radius-topleft: 3px;
+    // 	-moz-border-radius-bottomleft: 3px;
+    // 	-webkit-border-top-left-radius: 3px;
+    // 	-webkit-border-bottom-left-radius: 3px;
+    // 	border-top-left-radius: 3px;
+    // 	border-bottom-left-radius: 3px;
+    // }
+    input[type="text"] {
+      height: 22px;
+      color: $black-3;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      border: none;
+      padding: 8px 19px;
+    }
+    .btn {
+      // -webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+      // -moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+      // box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+      // color: #fff;
+      // width: 100px;
+      // line-height: 30px;
+    }
+    .btn-gary {
+      width: 153px;
+      height: 30px;
+      line-height: 10px;
+      padding: 8px 10px;
+      border-radius: 0;
+      background-color: $gray-16;
+      color: $gray-12;
+      font-size: 12px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .wpcf7-form-control-wrap {
+      span {
+        display: block!important;
+      }
+    }
+  }
+  .buttonfield {
+    margin-bottom: 23px;
+    button,
+    [type="button"],
+    [type="submit"],
+    {
+      height: 45px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid $orange-1;
+      background-color: $orange-1;
+      color: $white;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      line-height: 0;
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: $orange-1;
+        color: $orange-1 !important;
+        background-color: $white;
+      }
+    }
+    .wpcf7-submit,
+    .btn-default {
+      height: 45px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid $orange-1;
+      background-color: $orange-1;
+      color: $white;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      line-height: 0;
+      padding: 0 49px;
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: $orange-1;
+        color: $orange-1 !important;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.wpcf7-not-valid {
+  // border-color: red !important;
+}
+
+.wpcf7-not-valid-tip {
+  display: none;
+  color: red !important;
+  // position: absolute;
+  font-size: 12px !important;
+  display: inline-table !important;
+}
+
+.screen-reader-response {
+  display: none !important;
+}
+
+.wpcf7-response-output,
+.wpcf7-validation-errors {
+  position: absolute;
+  color: red;
+  margin: 0!important;
+  padding: 0!important;
+  border: none!important;
+}
+
+.wpcf7-mail-sent-ok {
+  color: green !important;
+}
+
+@media(min-width:768px) and (max-width:991px) {
+  .formsection {
+    .buttonfield {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .formsection {
+    .buttonfield {
+      margin-bottom: 0;
+    }
+  }
+  .wpcf7-response-output,
+  .wpcf7-validation-errors {
+    position: relative;
+    // bottom: 10px;
+    bottom: 0;
+  }
+}
