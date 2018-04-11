@@ -9,11 +9,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package geuestable
+ * @package guestable
  */
 
 get_header();
 ?>
+
+<?php if(!is_front_page()) : ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -34,7 +36,15 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+<?php else: ?>
+    <?php
+      if( have_posts() ) {
+          while( have_posts() ) {
+              the_post();
+              the_content();
+          }
+      }
+    ?>
+<?php endif; ?>
 <?php
-get_sidebar();
 get_footer();

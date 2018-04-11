@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package geuestable
+ * @package guestable
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses geuestable_header_style()
+ * @uses guestable_header_style()
  */
-function geuestable_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'geuestable_custom_header_args', array(
+function guestable_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'guestable_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'geuestable_header_style',
+		'wp-head-callback'       => 'guestable_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'geuestable_custom_header_setup' );
+add_action( 'after_setup_theme', 'guestable_custom_header_setup' );
 
-if ( ! function_exists( 'geuestable_header_style' ) ) :
+if ( ! function_exists( 'guestable_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see geuestable_custom_header_setup().
+	 * @see guestable_custom_header_setup().
 	 */
-	function geuestable_header_style() {
+	function guestable_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

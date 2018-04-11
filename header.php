@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package geuestable
+ * @package guestable
  */
 
 ?>
@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geuestable' ); ?></a>
+<!--	<a class="skip-link screen-reader-text" href="#content">--><?php //esc_html_e( 'Skip to content', 'guestable' ); ?><!--</a>-->
 
 	<header id="masthead" class="site-header hidden">
 		<div class="site-branding">
@@ -36,15 +36,15 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$geuestable_description = get_bloginfo( 'description', 'display' );
-			if ( $geuestable_description || is_customize_preview() ) :
+			$guestable_description = get_bloginfo( 'description', 'display' );
+			if ( $guestable_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $geuestable_description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $guestable_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'geuestable' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'guestable' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',

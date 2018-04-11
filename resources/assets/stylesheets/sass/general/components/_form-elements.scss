@@ -50,7 +50,7 @@
           color: $gray-14 !important;
         }
         /* Edge (also supports ::-webkit-input-placeholder) */
-        &::-ms-input-placeholder {
+        &::placeholder {
           color: $gray-14;
         }
       }
@@ -90,7 +90,7 @@
         color: $gray-14 !important;
       }
       /* Edge (also supports ::-webkit-input-placeholder) */
-      &::-ms-input-placeholder {
+      &::placeholder {
         color: $gray-14;
       }
     }
@@ -155,7 +155,7 @@
     margin-bottom: 23px;
     button,
     [type="button"],
-    [type="submit"],
+    [type="submit"]
     {
       height: 45px;
       margin-top: 5px;
