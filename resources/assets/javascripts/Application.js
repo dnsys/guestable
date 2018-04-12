@@ -9,6 +9,7 @@ class Application{
     constructor(){
       console.log('application start');
       this._init()
+      this._logoSliderInit()
 
       //classes
       new Tabs()
@@ -33,6 +34,31 @@ class Application{
           settings: {
 
             slidesToShow: 2
+          }
+        },
+          {
+            breakpoint: 480,
+            settings: {
+
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    }
+
+    _logoSliderInit(){
+      $('.logo-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        responsive: [{
+          breakpoint: 992,
+          settings: {
+
+            slidesToShow: 3
           }
         },
           {

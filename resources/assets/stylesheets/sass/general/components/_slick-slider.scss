@@ -1,0 +1,35 @@
+.slick-slider {
+  margin: 0 0 35px;
+  .slick-slide {
+    img {
+      width: 100%;
+    }
+  }
+  .slick-list {
+    padding: 0!important;
+  }
+  .slick-dots {
+    bottom: -43px;
+    li,
+    li button,
+    .slick-active {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+    li {
+      margin: 0 9px;
+      background-color: $gray-5;
+      button {
+        padding: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    li:hover,
+    .slick-active {
+      background-color: $orange-1;
+    }
+  }
+}

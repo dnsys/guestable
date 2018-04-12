@@ -1,0 +1,118 @@
+.related_content_section {
+  .content_box {
+    height: 429px;
+    background-position: center center;
+    background-size: cover;
+    padding: 0;
+    text-align: center;
+    a {
+      .overlay_box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        // display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          .inner-box {
+            padding-top: 12rem;
+          }
+        }
+        .inner-box {
+          padding-top: 17rem;
+          -webkit-transition: padding-top 0.4s;
+          /* For Safari 3.1 to 6.0 */
+          transition: padding-top 0.4s;
+        }
+        h5 {
+          color: $white;
+          font-size: 26px;
+          font-weight: 500;
+          letter-spacing: 0.6px;
+        }
+      }
+      .tranpertent-read-more-button {
+        display: none;
+        margin-top: 25px;
+      }
+      &:hover {
+        .tranpertent-read-more-button {
+          display: inline-block;
+        }
+        .overlay_box {
+          background: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 1200px) {}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+  .related_content_section {
+    .content_box {
+      height: 300px;
+      a {
+        .overlay_box {
+          h5 {
+            color: $white;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+  .related_content_section {
+    .content_box {
+      height: 250px;
+      a {
+        .overlay_box {
+          h5 {
+            font-size: 20px;
+          }
+        }
+        .tranpertent-read-more-button {
+          display: none;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .related_content_section {
+    .content_box {
+      background-size: cover;
+      height: 250px;
+      border-bottom: 1px solid $white;
+      a {
+        .overlay_box {
+          h5 {
+            font-size: 18px;
+          }
+        }
+        .tranpertent-read-more-button {
+          display: none;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 550px) {}
+
+.related_content_section .content_box a .overlay_box h5 {
+   color: #fff;
+   font-size: 26px;
+   font-weight: 500;
+   letter-spacing: 0.6px;
+ }
