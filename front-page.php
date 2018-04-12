@@ -1178,44 +1178,46 @@
 </section>
 
 <section class="related_content_section clearfix home-page-blog-section">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="title">From Our Blog</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title">From Our Blog</h2>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 content_box" style="background-image: url('https://guestable.com/wp-content/uploads/2018/01/mgmt.jpg');">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 content_box" style="background-image: url('https://guestable.com/wp-content/uploads/2018/01/mgmt.jpg');">
 
-            <a href="https://guestable.com/blog/airbnb-management-exceptional-reviews/">
-                <div class="overlay_box">
-                    <div class="inner-box">
-                        <h5>Airbnb Management for Exceptional Reviews</h5>
-                        <h6 class="tranpertent-read-more-button" href="">Read More</h6>
+                <a href="https://guestable.com/blog/airbnb-management-exceptional-reviews/">
+                    <div class="overlay_box">
+                        <div class="inner-box">
+                            <h5>Airbnb Management for Exceptional Reviews</h5>
+                            <h6 class="tranpertent-read-more-button" href="">Read More</h6>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 content_box" style="background-image: url('https://guestable.com/wp-content/uploads/2018/01/Listing-Development-1.png');">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 content_box" style="background-image: url('https://guestable.com/wp-content/uploads/2018/01/Listing-Development-1.png');">
 
-            <a href="https://guestable.com/blog/build-optimized-airbnb-listing/">
-                <div class=" overlay_box">
-                    <div class="inner-box">
-                        <h5>How To Build An Optimized Airbnb Listing</h5>
-                        <h6 class="tranpertent-read-more-button" href="">Read More</h6>
+                <a href="https://guestable.com/blog/build-optimized-airbnb-listing/">
+                    <div class=" overlay_box">
+                        <div class="inner-box">
+                            <h5>How To Build An Optimized Airbnb Listing</h5>
+                            <h6 class="tranpertent-read-more-button" href="">Read More</h6>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 content_box" style="background-image: url('https://guestable.com/wp-content/uploads/2017/12/screening.jpg');">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 content_box" style="background-image: url('https://guestable.com/wp-content/uploads/2017/12/screening.jpg');">
 
-            <a href="https://guestable.com/blog/screening-airbnb-guests-quality-hosting-experience/">
-                <div class=" overlay_box">
-                    <div class="inner-box">
-                        <h5>Screening Airbnb Guests for a Quality Hosting Experience</h5>
-                        <h6 class="tranpertent-read-more-button" href="">Read More</h6>
+                <a href="https://guestable.com/blog/screening-airbnb-guests-quality-hosting-experience/">
+                    <div class=" overlay_box">
+                        <div class="inner-box">
+                            <h5>Screening Airbnb Guests for a Quality Hosting Experience</h5>
+                            <h6 class="tranpertent-read-more-button" href="">Read More</h6>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
 </section>
