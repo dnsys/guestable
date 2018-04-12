@@ -1,0 +1,308 @@
+.we-offer-tab-section {
+  border-bottom: 1px solid $gray-4;
+  .top-content {
+    text-align: center;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $gray-1;
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+  .inner-tab-row {
+    float: none;
+    margin: 0 auto;
+    .slick-slide {
+      &:last-child {
+        a {
+          // border-left: none;
+        }
+      }
+    }
+  }
+  .tab-heading {
+    a {
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      background-color: $gray-2;
+      height: 68px;
+      overflow: hidden;
+      padding: 14px 0;
+      box-shadow: 0 0 1px 0 #c9c8cd;
+      h5 {
+        color: $gray-1;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        span {
+          img {
+            width: auto;
+            display: inline-block;
+          }
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+      .img-tab-inner {
+        padding-right: 15px;
+      }
+      .active-image {
+        display: none;
+      }
+      .img-tab-inner {
+        max-width: 50px;
+        max-height: 50px;
+      }
+      &:hover {
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.31);
+        background-color: $blue-1;
+        h5 {
+          color: $white;
+        }
+        .active-image {
+          display: inline-block;
+        }
+        .inactive-image {
+          display: none;
+        }
+      }
+      .text-wrapper {
+        margin-top: 11px;
+        display: inline-block;
+      }
+    }
+    .sub_menu_active {
+      a {
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.31);
+        background-color: $blue-1;
+        cursor: default;
+        h5 {
+          color: $white;
+        }
+        .active-image {
+          display: inline-block;
+        }
+        .inactive-image {
+          display: none;
+        }
+      }
+    }
+    .slick-slider .slick-slide img {
+      width: auto;
+    }
+    // slider
+    .tab-slider {
+      .interactive-click {
+        overflow: auto;
+        height: 154px;
+        padding: 15px 0 0;
+        outline: none;
+        cursor: pointer;
+        .inner-image {
+          background-position: center center;
+          height: 63px;
+        }
+        p {
+          margin: 17px 0 0;
+          padding-bottom: 13px;
+          color: $gray-1;
+          font-size: 17px;
+          font-weight: 500;
+          text-align: center;
+          line-height: 20px;
+        }
+        &.interactive-active {
+          border-bottom: 3px solid $orange-1;
+        }
+      }
+      .left-arrow,
+      .right-arrow {
+        font-size: 47px;
+        line-height: 0;
+        position: absolute;
+        top: 58%;
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        padding: 0;
+        cursor: pointer;
+        color: $orange-1;
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      .left-arrow {
+        left: -114px;
+      }
+      .right-arrow {
+        right: -117px;
+      }
+      .slick-disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+  .top-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h2 {
+      color: $gray-1;
+      font-size: 30px;
+      font-weight: 400;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  .tab-content-section {
+    padding: 75px 30px;
+    .inner_tab_inner_common_wrapper {
+      text-align: center;
+      box-shadow: 0 2px 15px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      border: 1px solid transparent;
+      background-color: $white;
+      padding: 41px 40px 51px;
+      h3 {
+        color: $gray-1;
+        font-size: 24px;
+        margin-bottom: 31px;
+        font-weight: 500;
+        height: 50px;
+      }
+      p {
+        color: $gray-1;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 23px;
+        margin-bottom: 19px;
+        height: 80px;
+      }
+      .orange-button {
+        padding: 13px 25px;
+      }
+      &:hover {
+        border: 1px solid $blue-1;
+      }
+    }
+  }
+  .inner-tab-full-wrapper {
+    padding: 24px 72px 16px 39px;
+    .col-xs-3 {
+      padding: 0 10px 23px;
+    }
+    .inner_tab_box {
+      box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      background-color: $white;
+      display: block;
+      padding: 4px 0px 15px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      .inner-image {
+        min-height: 81px;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .inner-content {
+        color: $gray-1;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+        height: 33px;
+        overflow: hidden;
+        p {
+          color: $gray-1;
+          font-size: 12px;
+          font-weight: 400;
+          margin-top: 2px;
+          line-height: 15px;
+        }
+      }
+      &:hover {
+        border: 1px solid $blue-1;
+      }
+    }
+    .inner_tab_inner_common_active {
+      a {
+        box-shadow: 0 2px 15px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        border: 1px solid $blue-1;
+        background-color: $white;
+        cursor: default;
+      }
+    }
+  }
+  .contact-link {
+    text-align: center;
+    padding-bottom: 50px;
+    h6 {
+      color: #36343e;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 14px;
+      a {
+        color: $orange-1;
+        text-decoration: underline;
+        &:hover {
+          color: $blue-1;
+        }
+      }
+    }
+  }
+  .mobile-tab-slider {
+    text-align: center;
+    h2 {
+      color: $gray-1;
+      font-size: 28px;
+      margin-bottom: 31px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .mobile-slider {
+      text-align: center;
+      margin-bottom: 50px;
+      .slick-slide {
+        padding: 0 15px;
+        h3 {
+          color: $gray-1;
+          font-size: 24px;
+          margin-bottom: 31px;
+          font-weight: 500;
+        }
+        p {
+          color: $gray-1;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 23px;
+          margin-bottom: 19px;
+        }
+        .orange-button {
+          padding: 13px 25px;
+        }
+      }
+    }
+  }
+  .slick-slider .slick-dots {
+    bottom: -22px;
+  }
+}
+
+@media(max-width:767px) {
+  .details-section {
+    height: auto;
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+.we-offer-tab-section .tab-heading a h5 {
+  font-size: 14px;
+}

@@ -1,0 +1,149 @@
+//
+//  Accordian Row  Variables
+//______________________________
+$accor-row-bg-color: $gray-2;
+$accor-row-font-color: $gray-1;
+$accor-row-font-size: 20px;
+$accor-row-font-weight: 400;
+//
+//  Accordian Trigger  Variables
+//______________________________
+$accor-trigger-bg-color: $blue-1;
+$accor-trigger-font-color: $white;
+$accor-trigger-font-size: 20px;
+$accor-trigger-font-weight: 400;
+//
+// Accord Common Variables
+//______________________________
+$accor-bg-color: transparent;
+$accor-p-bg-color: transparent;
+$accor-p-font-color: $gray-1;
+$accor-p-font-size: 16px;
+$accor-p-font-weight: 300;
+
+.accordion dl,
+.accordion-list {
+  margin: 0;
+  &:after {
+    width: 100%;
+    height: 1em;
+    content: "";
+    display: block;
+  }
+}
+.accordion dd,
+.accordion__panel {
+  background-color: $accor-p-bg-color;
+}
+.accordion p {
+  margin: 10px 0 30px;
+  font-size: $accor-p-font-size;
+  line-height: 23px;
+  font-weight: $accor-p-font-weight;
+}
+.accordion {
+  width: 1030px;
+  position: relative;
+  background-color: $accor-bg-color;
+  margin: 0 auto;
+}
+.accordionTitle,
+.accordion__Heading {
+  padding: 28px 30px;
+  font-weight: $accor-row-font-weight;
+  margin: 0 0 20px!important;
+  display: block;
+  text-decoration: none;
+  color: $accor-row-font-color;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: $accor-row-bg-color;
+  //background-image: url(../images/arrow-right.png);
+  background-position: 97.1% 52%;
+  font-size: $accor-row-font-size!important;
+  &:hover {
+    color: $accor-trigger-font-color;
+    background-color: $accor-trigger-bg-color;
+    //background-image: url(../images/white-arrow-right.png);
+  }
+}
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+  color: $accor-trigger-font-color;
+  background-color: $accor-trigger-bg-color;
+  //background-image: url(../images/white-arrow-down.png);
+  background-position: 97.3% 52%;
+}
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+  //SHAME: magic number to allow the accordion to animate
+
+  // max-height: 50em;
+  transition: max-height 1s;
+
+  @media screen and (min-width:48em) {
+    // max-height: 15em;
+    transition: max-height 0.5s
+  }
+}
+
+.accordionItem.is-collapsed {
+  max-height: 0;
+}
+.no-js .accordionItem.is-collapsed {
+  max-height: auto;
+}
+.animateIn {
+  animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+.animateOut {
+  animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+    transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes accordionOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+  }
+}
+
+@media(min-width:992px) and (max-width: 1199px) {
+  .accordion {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+  .accordion {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media(max-width:767px) {
+  .accordion {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .accordionTitle,
+  .accordion__Heading {
+    font-size: 18px!important;
+  }
+}

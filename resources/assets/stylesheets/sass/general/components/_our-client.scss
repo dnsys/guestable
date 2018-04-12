@@ -1,0 +1,80 @@
+.our-clients {
+  background-color: $gray-2;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .top-content-section {
+    margin: 0 auto;
+    float: none;
+    padding-bottom: 48px;
+    h2 {
+      color: $gray-1;
+      font-size: 30px;
+      font-weight: 400;
+    }
+    h6 {
+      color: $gray-1;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 34px;
+    }
+  }
+  .client-box {
+    padding: 0;
+    a {
+      display: block;
+      width: 100%;
+      padding: 0 15px;
+      border: 1px solid transparent;
+      h6 {
+        color: $gray-1;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 25px;
+        margin-bottom: 9px;
+      }
+      p {
+        color: $gray-1;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 23px;
+      }
+      .inner-image {
+        height: 207px;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+      }
+      &:hover {
+        box-shadow: 0 2px 15px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        border: 1px solid $blue-1;
+        background-color: $white;
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    &:before {
+      color: $blue-1;
+    }
+  }
+  .slick-dots {
+    li:hover,
+    .slick-active {
+      background-color: $blue-1!important;
+    }
+  }
+}
+
+.our-clients .top-content-section h6 {
+  color: #46444f;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.our-clients .top-content-section h2 {
+  color: #46444f;
+  font-size: 30px;
+  font-weight: 400;
+}

@@ -1,0 +1,77 @@
+//
+// transperent button
+//
+.tranpertent-read-more-button {
+  border-radius: 4px;
+  border: 1px solid $white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 51px;
+  display: inline-block;
+  &:hover {
+    border: 1px solid $white;
+    color: $white;
+  }
+}
+
+//
+// orange button
+//
+.orange-button {
+  border-radius: 4px;
+  background-color: $orange-1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 51px;
+  display: inline-block;
+  border: 1px solid transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  &:hover {
+    border: 1px solid $orange-1;
+    color: $orange-1;
+    background-color: $white;
+  }
+}
+
+//
+// mixin for link_button div
+// ________________________
+@mixin link_button-styles( $width, // link_button width
+$margin, // link_button margin
+$padding, // link_button padding
+$floatType // link_button float type
+) {
+  width: $width;
+  float: $floatType;
+  margin: $margin;
+  padding: $padding;
+}
+
+//
+// mixin for link's dynamic values contain properties
+// ________________________
+@mixin link_button-dynamic-styles( $maxwidth, // Link width
+$margin, // Link margin
+$floatType // Link float type
+) {
+  max-width: $maxwidth;
+  float: $floatType;
+  margin: $margin;
+}
+
+@media(min-width: 1200px) {}
+
+@media(min-width: 992px) and (max-width: 1199px) {}
+
+@media(min-width: 768px) and (max-width: 991px) {}
+
+@media(max-width: 767px) {}
+
+@media(max-width: 550px) {}
