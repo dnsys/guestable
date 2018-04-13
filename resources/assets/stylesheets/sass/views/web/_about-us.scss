@@ -1,0 +1,123 @@
+/*===============
+  About Us
+  ===============*/
+
+.about-us {
+  &.main-para-section {
+    padding-bottom: 38px;
+    background-repeat: no-repeat;
+  }
+  &.contact-map-section {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    .map-container {
+      h2 {
+        text-align: center;
+      }
+      #map {
+        .gm-style {
+          #infowindow {
+            padding: 50px;
+          }
+        }
+      }
+      .formsection {
+        width: 496px;
+        margin: 37px auto 20px;
+        .inputfield {
+          display: inline-block;
+          input {
+            &[type="text"],
+            &[type="email"],
+            &[type="password"],
+            &[type="tel"],
+            &[type="url"],
+            &[type="number"] {
+              // background-image: url(../images/dropdown-arrow.png);
+              background-position: 254px 0px;
+              cursor: pointer;
+              // padding-right: 44px;
+              height: 40px;
+              width: 300px;
+              font-size: 16px;
+              font-weight: 400;
+              margin-right: 7px;
+              /* - Chrome ≤56,
+   - Safari 5-10.0
+   - iOS Safari 4.2-10.2
+   - Opera 15-43
+   - Opera Mobile >12
+   - Android Browser 2.1-4.4.4
+   - Samsung Internet
+   - UC Browser for Android
+   - QQ Browser */
+              &::-webkit-input-placeholder {
+                color: rgba(54, 52, 62, 0.52);
+              }
+              /* Firefox 4-18 */
+              &:-moz-placeholder {
+                color: rgba(54, 52, 62, 0.52);
+              }
+              /* Firefox 19-50 */
+              &::-moz-placeholder {
+                color: rgba(54, 52, 62, 0.52);
+              }
+              /* - Internet Explorer 10–11
+   - Internet Explorer Mobile 10-11 */
+              &:-ms-input-placeholder {
+                color: rgba(54, 52, 62, 0.52) !important;
+              }
+              /* Edge (also supports ::-webkit-input-placeholder) */
+              &::-ms-input-placeholder {
+                color: rgba(54, 52, 62, 0.52);
+              }
+            }
+          }
+        }
+        .buttonfield {
+          display: inline-block;
+          button,
+          [type="button"],
+          [type="submit"]
+          {
+            width: 128px;
+            height: 40px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            color: $white;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: normal;
+          }
+        }
+        #result {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 23px;
+          color: $orange-1;
+          a {
+            color: $blue-1;
+            &:hover {
+              color: #46444f;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .about-us {
+    &.contact-map-section {
+      background-size: cover;
+      .map-container {
+        .formsection {
+          width: 100%;
+          padding: 0 15px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

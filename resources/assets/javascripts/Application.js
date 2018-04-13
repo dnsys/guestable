@@ -10,6 +10,7 @@ class Application{
       console.log('application start');
       this._init()
       this._logoSliderInit()
+      this._floatingForm()
 
       //classes
       new Tabs()
@@ -70,6 +71,28 @@ class Application{
           }
         ]
       });
+    }
+
+    _floatingForm(){
+      $(".top-wrapper").click(function() {
+
+        // $(".bottom-wrapper").show();
+        $(".bottom-wrapper").slideDown('slow');
+        $(this).parents().find('.float-form-wrapper').addClass('active-form');
+      });
+
+      $(".floter-close").click(function() {
+
+        $(this).parent().removeClass('active-form');
+        $(".bottom-wrapper").css("display", "none");
+
+        $(this).parents().find('.float-form-wrapper').removeClass('active-form');
+      });
+
+      setTimeout(function() {
+        $('.top-full-wrapper .top-wrapper').fadeIn("slow");
+      }, 7000);
+
     }
 }
 
