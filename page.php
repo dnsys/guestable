@@ -17,8 +17,6 @@ get_header();
 
 <?php if(!is_front_page()) : ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
@@ -34,8 +32,6 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 <?php else: ?>
     <?php
       if( have_posts() ) {

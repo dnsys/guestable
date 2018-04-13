@@ -63,7 +63,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://guestable.com"><img src="https://guestable.com/wp-content/uploads/2018/01/guestable-logo.png" alt="Guestable Logo" class="img-responsive"></a>
+      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <?php
+          $logo_img = '';
+          if( $custom_logo_id = get_theme_mod('custom_logo') ){
+              $logo_img = wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                  'class'    => 'image-responsive',
+                  'itemprop' => 'logo',
+              ) );
+          }
+
+          echo $logo_img;
+          ?>
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
