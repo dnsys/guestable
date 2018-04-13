@@ -44,7 +44,7 @@ if ( ! function_exists( 'guestable_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'guestable' ),
+			'main_menu' => esc_html__( 'Primary', 'guestable' ),
 		) );
 
 		/*
@@ -160,3 +160,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+class Add_Class_Sub_Menu extends Walker_Nav_Menu {
+    function start_lvl(&$output, $depth = 0, $args = Array()) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+    }
+}

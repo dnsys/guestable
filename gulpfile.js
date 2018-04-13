@@ -29,7 +29,7 @@ const config = {
 gulp.task('webpack', function (callback) {
   // run webpack
   process.env.NODE_ENV = 'production'
-  process.env.ASSET_PATH = '/wp-content/themes/amstroy/build/'
+  process.env.ASSET_PATH = '/wp-content/themes/guestable/build/'
 
   let webpackConfig = require('./webpack.config')
 

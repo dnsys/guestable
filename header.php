@@ -70,24 +70,35 @@
     <div class="hidden-xs">
       <div class="collapse navbar-collapse navbar-ex1-collapse hidden-xs">
 
-        <ul id="menu-main-menu" class="nav navbar-nav navbar-right"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-94" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-94 dropdown"><a title="Client Type" href="/clients/homeowners/" class="dropdown-toggle" aria-haspopup="true">Client Type <span class="caret"></span></a>
-            <ul role="menu" class=" dropdown-menu">
-              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-493" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-493"><a title="HOMEOWNERS" href="https://guestable.com/clients/homeowners/">HOMEOWNERS</a></li>
-              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-226" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-226"><a title="BUILDING OWNERS" href="https://guestable.com/clients/building-owners/">BUILDING OWNERS</a></li>
-              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-227" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-227"><a title="DEVELOPERS" href="https://guestable.com/clients/developers/">DEVELOPERS</a></li>
-            </ul>
-          </li>
-          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98 dropdown"><a title="Services" href="/service/full-service-manager/" class="dropdown-toggle" aria-haspopup="true">Services <span class="caret"></span></a>
-            <ul role="menu" class=" dropdown-menu">
-              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-419" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-419"><a title="PROPERTY MANAGEMENT FULL SERVICE" href="https://guestable.com/service/full-service-property-management/">PROPERTY MANAGEMENT FULL SERVICE</a></li>
-              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-421" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-421"><a title="VIRTUAL PROPERTY MANAGEMENT" href="https://guestable.com/service/virtual-property-management/">VIRTUAL PROPERTY MANAGEMENT</a></li>
-              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-420" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-420"><a title="HOTEL PROPERTY MANAGEMENT SYSTEM" href="https://guestable.com/service/hotel-property-management-system/">HOTEL PROPERTY MANAGEMENT SYSTEM</a></li>
-            </ul>
-          </li>
-          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840"><a title="About" href="https://guestable.com/about-us/">About</a></li>
-          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a title="Blog" href="https://guestable.com/blog/">Blog</a></li>
-          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-660" class="learn-more menu-item menu-item-type-post_type menu-item-object-page menu-item-660"><a title="Learn More" href="https://guestable.com/contact-us/">Learn More</a></li>
-        </ul>
+          <?php
+          wp_nav_menu( array(
+              'theme_location' => 'main_menu',
+              'container' => false,
+              'menu_class'     => 'nav navbar-nav navbar-right',
+              'menu_id'        => 'menu-main-menu',
+              'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+              'walker' => new Add_Class_Sub_Menu()
+          ) );
+          ?>
+
+<!--        <ul id="menu-main-menu" class="nav navbar-nav navbar-right"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-94" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-94 dropdown"><a title="Client Type" href="/clients/homeowners/" class="dropdown-toggle" aria-haspopup="true">Client Type <span class="caret"></span></a>-->
+<!--            <ul role="menu" class=" dropdown-menu">-->
+<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-493" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-493"><a title="HOMEOWNERS" href="https://guestable.com/clients/homeowners/">HOMEOWNERS</a></li>-->
+<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-226" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-226"><a title="BUILDING OWNERS" href="https://guestable.com/clients/building-owners/">BUILDING OWNERS</a></li>-->
+<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-227" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-227"><a title="DEVELOPERS" href="https://guestable.com/clients/developers/">DEVELOPERS</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98 dropdown"><a title="Services" href="/service/full-service-manager/" class="dropdown-toggle" aria-haspopup="true">Services <span class="caret"></span></a>-->
+<!--            <ul role="menu" class=" dropdown-menu">-->
+<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-419" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-419"><a title="PROPERTY MANAGEMENT FULL SERVICE" href="https://guestable.com/service/full-service-property-management/">PROPERTY MANAGEMENT FULL SERVICE</a></li>-->
+<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-421" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-421"><a title="VIRTUAL PROPERTY MANAGEMENT" href="https://guestable.com/service/virtual-property-management/">VIRTUAL PROPERTY MANAGEMENT</a></li>-->
+<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-420" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-420"><a title="HOTEL PROPERTY MANAGEMENT SYSTEM" href="https://guestable.com/service/hotel-property-management-system/">HOTEL PROPERTY MANAGEMENT SYSTEM</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840"><a title="About" href="https://guestable.com/about-us/">About</a></li>-->
+<!--          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a title="Blog" href="https://guestable.com/blog/">Blog</a></li>-->
+<!--          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-660" class="learn-more menu-item menu-item-type-post_type menu-item-object-page menu-item-660"><a title="Learn More" href="https://guestable.com/contact-us/">Learn More</a></li>-->
+<!--        </ul>-->
       </div><!-- /.navbar-collapse -->
     </div>
 
