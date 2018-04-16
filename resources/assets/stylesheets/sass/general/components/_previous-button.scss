@@ -1,0 +1,33 @@
+.previous-button {
+  margin-bottom: 22px;
+  display: inline-block;
+  a.btn {
+    //background-image: url(../images/left-arrow-orange.png);
+    //background-position: left;
+    color: $orange-1;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    //padding: 4px;
+    margin: 0;
+    &:hover {}
+    &:active {
+      background-color: transparent;
+      border-color: transparent;
+      color: $orange-1;
+    }
+
+    &:before{
+      content: '\f104';
+      font-family: FontAwesome;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .previous-button {
+    padding: 0 15px;
+  }
+}

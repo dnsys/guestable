@@ -12,6 +12,10 @@
   }
 }
 
+.blog-row{
+  position: relative;
+}
+
 .blog-section {
   padding-top: 70px;
   padding-bottom: 50px;
@@ -82,6 +86,10 @@
     margin-top: 0;
     padding: 13px 56px;
   }
+}
+
+#posts-container{
+  min-height: 100px;
 }
 
 @media(min-width:992px) and (max-width: 1199px) {}

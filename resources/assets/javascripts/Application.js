@@ -12,6 +12,9 @@ class Application{
       this._logoSliderInit()
       this._floatingForm()
       this._equalBlogArticlesHeight()
+      this._mobileTabMenu()
+      this._categoryTabsAjax()
+      this._goBackButton()
 
       //classes
       new Tabs()
@@ -104,6 +107,58 @@ class Application{
           highestBox = $(this).height();
       });
       $('.blog-box a', this).height(highestBox);
+    }
+
+    _mobileTabMenu(){
+      let $windowWidth = $(window).width();
+
+      $('.sideBar').prepend('<a href="#_" class="mobile_menu_items visible-xs"><span class="menu_texts">Tab Menu</span><span class="plus_mark">+</span></a>');
+      $(".mobile_menu_items").click(function() {
+        $('.quick-contact').fadeToggle();
+        $('.sideBar ul').slideToggle();
+        $('.sideBar h3, .contact_sidebar_item').slideToggle();
+        $(this).toggleClass('activate');
+      });
+    }
+
+    _categoryTabsAjax(){
+      $('#menu-blog-navigation li a').on('click', function (e) {
+        e.preventDefault()
+
+        let $this = $(this)
+        let dataTarget = $(this).attr('data-target');
+        let postsContainer = $('#posts-container')
+
+        console.log(dataTarget)
+
+        $('#menu-blog-navigation li').removeClass('active')
+        $this.parent().addClass('active')
+
+        postsContainer.html('')
+        postsContainer.siblings('.custom-loader').show()
+
+        $.ajax({
+          type: 'post',
+          url: ajaxUrl, //sometimes I'm using bloginfo to get current path: url: '<?php bloginfo('template_url'); ?>/ajax.php',
+          data: {
+            action: 'filter_posts_by_category',
+            dataTarget: dataTarget,
+          },
+          success: function(data) {
+            console.log(data);
+            setTimeout(function () {
+              postsContainer.siblings('.custom-loader').hide()
+              postsContainer.html(data)
+            }, 3000)
+          }
+        });
+      })
+    }
+
+    _goBackButton(){
+      $('.go-back-button').on('click', function () {
+        window.history.back();
+      })
     }
 }
 

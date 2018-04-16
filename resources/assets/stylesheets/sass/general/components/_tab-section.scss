@@ -1,0 +1,108 @@
+.tab-section {
+  position: relative;
+  background: $white;
+  // border-bottom: 1px solid #e3e8ec;
+  box-shadow: 0 1px 0 #e3e8ec;
+  ul {
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+    li {
+      float: left;
+      a {
+        color: $gray-3;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 26px 20px;
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        &:hover,
+        &.active {
+          color: $blue-1;
+          border-bottom: 2px solid $blue-1;
+        }
+      }
+    }
+    .active {
+      a {
+        color: $blue-1 !important;
+        border-bottom: 2px solid $blue-1;
+      }
+    }
+  }
+  .plus_mark {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 58px;
+    right: 15px;
+    top: -5px;
+    // -webkit-box-shadow: 0 0 8px 2px rgba(000, 000, 000, 0.4);
+    // box-shadow: 0 0 8px 2px rgba(000, 000, 000, 0.4);
+    font-size: 50px;
+    font-weight: 200;
+    color: #fff;
+  }
+  .menu_texts {
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 19px;
+    // display: none;
+  }
+  .mobile_menu_items.activate .plus_mark {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .mobile_menu_items .plus_mark {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    outline: 0;
+  }
+  .mobile_menu_items {
+    background: $blue-1;
+    padding: 15px 0;
+  }
+  .mobile_menu_items .plus_mark {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    outline: 0;
+  }
+}
+
+@media(min-width: 1200px) {}
+
+@media(min-width: 992px) and (max-width: 1199px) {}
+
+@media(min-width: 768px) and (max-width: 991px) {}
+
+@media(max-width: 767px) {
+  .tab-section {
+    box-shadow: none;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          color: $gray-3;
+          font-weight: 400;
+          padding: 10px 20px;
+          display: block;
+          border-bottom: 1px solid $blue-1;
+          margin-bottom: 0px;
+          &:hover {
+            color: $blue-1;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 550px) {}

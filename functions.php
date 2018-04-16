@@ -47,6 +47,10 @@ if ( ! function_exists( 'guestable_setup' ) ) :
 			'main_menu' => esc_html__( 'Primary', 'guestable' ),
 		) );
 
+        register_nav_menus( array(
+            'blog_tab_menu' => esc_html__( 'Blog tab menu', 'guestable' ),
+        ) );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -167,3 +171,96 @@ class Add_Class_Sub_Menu extends Walker_Nav_Menu {
         $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
     }
 }
+
+/**
+ * WP Posts Ajax
+ */
+function js_variables( $path = '' ){
+    $variables = array (
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'is_mobile' => wp_is_mobile()
+        // Тут обычно какие-то другие переменные
+    );
+
+    if ( is_admin() )
+        $url = admin_url( 'admin-ajax.php' );
+    else
+        $url = home_url( 'wp-admin/admin-ajax.php' );
+    $url .= ltrim( $path, '/' );
+
+    echo '<script type="text/javascript">var ajaxUrl = "' . $url . '"</script>';
+}
+add_action('wp_head','js_variables');
+
+function ajax_filter_posts_by_category(){
+    $target = $_POST['dataTarget'];
+
+    if($target == 'recent-posts'){
+        $args = array(
+            'post_type' => 'post',
+            'numberposts' => 12,
+            'post_status' => 'publish',
+            'orderby' => 'date',
+            'order' => 'DESC',
+        );
+    }else if($target == 'popular-posts'){
+        $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 12,
+            'meta_key' => 'wpb_post_views_count',
+            'orderby' => 'meta_value_num',
+            'order' => 'DESC'
+        );
+    }else {
+        $args = array(
+            'post_type' => 'post',
+            'numberposts' => 12,
+            'post_status' => 'publish',
+            'category_name' => $target,
+            'orderby' => 'date',
+            'order' => 'DESC'
+        );
+    }
+
+    $the_query  = new WP_Query($args);
+
+    if ($the_query->have_posts()) {
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+            $data = get_template_part('template-parts/content');
+        }
+    }
+    else {
+        // Since you're declared the $data variable before then assign the next value also in $data
+        // And at the end just echo it.
+        $data = __('Didnt find anything', THEME_NAME);
+    }
+    wp_reset_postdata();
+
+
+    $data;
+    // And must die() the function
+    die();
+}
+
+add_action('wp_ajax_filter_posts_by_category', 'ajax_filter_posts_by_category');
+add_action('wp_ajax_nopriv_filter_posts_by_category', 'ajax_filter_posts_by_category');
+
+
+/**
+ * Popular posts
+ */
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+//To keep the count accurate, lets get rid of prefetching
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);

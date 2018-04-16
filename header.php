@@ -21,38 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!--	<a class="skip-link screen-reader-text" href="#content">--><?php //esc_html_e( 'Skip to content', 'guestable' ); ?><!--</a>-->
-
-	<header id="masthead" class="site-header hidden">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$guestable_description = get_bloginfo( 'description', 'display' );
-			if ( $guestable_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $guestable_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'guestable' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+<input type="hidden" value="<?php echo $ajaxurl ?>">
 <section class="clearfix">
   <nav class="navbar navbar-default navbar-fixed-top cus-navigation" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -92,25 +61,6 @@
               'walker' => new Add_Class_Sub_Menu()
           ) );
           ?>
-
-<!--        <ul id="menu-main-menu" class="nav navbar-nav navbar-right"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-94" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-94 dropdown"><a title="Client Type" href="/clients/homeowners/" class="dropdown-toggle" aria-haspopup="true">Client Type <span class="caret"></span></a>-->
-<!--            <ul role="menu" class=" dropdown-menu">-->
-<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-493" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-493"><a title="HOMEOWNERS" href="https://guestable.com/clients/homeowners/">HOMEOWNERS</a></li>-->
-<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-226" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-226"><a title="BUILDING OWNERS" href="https://guestable.com/clients/building-owners/">BUILDING OWNERS</a></li>-->
-<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-227" class="menu-item menu-item-type-post_type menu-item-object-clients menu-item-227"><a title="DEVELOPERS" href="https://guestable.com/clients/developers/">DEVELOPERS</a></li>-->
-<!--            </ul>-->
-<!--          </li>-->
-<!--          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98 dropdown"><a title="Services" href="/service/full-service-manager/" class="dropdown-toggle" aria-haspopup="true">Services <span class="caret"></span></a>-->
-<!--            <ul role="menu" class=" dropdown-menu">-->
-<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-419" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-419"><a title="PROPERTY MANAGEMENT FULL SERVICE" href="https://guestable.com/service/full-service-property-management/">PROPERTY MANAGEMENT FULL SERVICE</a></li>-->
-<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-421" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-421"><a title="VIRTUAL PROPERTY MANAGEMENT" href="https://guestable.com/service/virtual-property-management/">VIRTUAL PROPERTY MANAGEMENT</a></li>-->
-<!--              <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-420" class="menu-item menu-item-type-taxonomy menu-item-object-services-category menu-item-420"><a title="HOTEL PROPERTY MANAGEMENT SYSTEM" href="https://guestable.com/service/hotel-property-management-system/">HOTEL PROPERTY MANAGEMENT SYSTEM</a></li>-->
-<!--            </ul>-->
-<!--          </li>-->
-<!--          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840"><a title="About" href="https://guestable.com/about-us/">About</a></li>-->
-<!--          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a title="Blog" href="https://guestable.com/blog/">Blog</a></li>-->
-<!--          <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-660" class="learn-more menu-item menu-item-type-post_type menu-item-object-page menu-item-660"><a title="Learn More" href="https://guestable.com/contact-us/">Learn More</a></li>-->
-<!--        </ul>-->
       </div><!-- /.navbar-collapse -->
     </div>
 
