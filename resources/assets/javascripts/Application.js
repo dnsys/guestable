@@ -11,6 +11,7 @@ class Application{
       this._init()
       this._logoSliderInit()
       this._floatingForm()
+      this._equalBlogArticlesHeight()
 
       //classes
       new Tabs()
@@ -93,6 +94,16 @@ class Application{
         $('.top-full-wrapper .top-wrapper').fadeIn("slow");
       }, 7000);
 
+    }
+
+    _equalBlogArticlesHeight(){
+      let highestBox = 0;
+      $('.blog-box a', this).each(function() {
+
+        if ($(this).height() > highestBox)
+          highestBox = $(this).height();
+      });
+      $('.blog-box a', this).height(highestBox);
     }
 }
 

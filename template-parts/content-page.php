@@ -12,8 +12,6 @@
 
 	<?php get_template_part( 'template-parts/head/header', 'inner-page' ); ?>
 
-	<?php guestable_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 		the_content();

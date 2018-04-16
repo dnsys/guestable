@@ -1,0 +1,78 @@
+//
+// mixin for align block verticl and horizontal
+// ________________________
+@mixin div-align-center(){
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+}
+
+
+//
+// mixin for vertical align center
+// ________________________
+@mixin v-align-center(){
+  display: block;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 auto;
+}
+
+
+//
+// mixin for horizontal align center
+// ________________________
+@mixin h-align-center(){
+  display: block;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+//
+// mixin for horizontal align left
+// ________________________
+@mixin h-align-left($left-position){
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: $left-position;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+//
+// mixin for horizontal align right
+// ________________________
+@mixin h-align-right($right-position){
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: $right-position;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+//
+// mixin for horizontal align right without block type
+// ________________________
+@mixin h-align-right-wb($right-position){
+  top: 0;
+  bottom: 0;
+  right: $right-position;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
