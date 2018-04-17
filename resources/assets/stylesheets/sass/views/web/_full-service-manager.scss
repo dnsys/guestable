@@ -1,0 +1,66 @@
+/*===============
+  Full Service Manager
+  ===============*/
+.full-service-manager {
+  &.tab-section {
+    ul {
+      li {
+        a {
+          padding: 24px 32px;
+          color: $gray-3;
+          font-size: 20px;
+          font-weight: 400;
+          &:hover,
+          &.active {
+            color: $blue-1;
+          }
+        }
+      }
+    }
+  }
+  .full-service-content {
+    margin: 59px 0 70px;
+    text-align: center;
+    p {
+      width: 968px;
+      margin: 0 auto;
+      color: $gray-1;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 23px;
+    }
+  }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+  .full-service-manager {
+    &.tab-section {
+      ul {
+        li {
+          a {
+            padding: 24px;
+          }
+        }
+      }
+    }
+    .full-service-content {
+      p {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .full-service-manager {
+    .full-service-content {
+      margin: 40px 0;
+      p {
+        width: auto;
+      }
+    }
+    &.tab-section {
+      margin-top: 15px;
+    }
+  }
+}
